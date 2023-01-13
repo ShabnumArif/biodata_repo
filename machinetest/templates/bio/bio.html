@@ -198,9 +198,6 @@
         color: #003147;
         margin-top: -480px;
 
-
-
-
     }
 
     .profile_img h1 {
@@ -208,35 +205,18 @@
         color: #003147;
     }
 
-    /* .pop_up {
-        transform: translate(-50% -50%)scale(0.1);
-        top: 100px;
-        left:100px;
-        position: relative;
-        width: 300px;
-        max-width: 1000px;
-        min-height: 700px;
-        background: #fff;
-        display: grid;
-        margin: 50px;
-        grid-template-columns: 1fr 2fr;
-        box-shadow: 0 35px 55px rgba(0, 0, 0, .1);
-
-    } */
+    
 </style>
 
 
 <body>
     <div class="container" id="container1" style="display: grid;">
         <div class="left_side">
-             <!-- <div class="profileText"> -->
-            <!-- <div class="imgBx">
-                    <img src="{% static 'images/pic.jpg' %}" alt="profile pic">
-                </div> -->
-            <!-- </div>  -->
-            <label for="load_file">Upload Image</label>
-            <input type="file" id="load_file" accept="image/*" onchange="showPreview(event);">
+             
+            
             <h2>BioData</h2>
+            <!-- <label for="load_file">Upload Image</label>
+            <input type="file" id="load_file" accept="image/*" onchange="showPreview(event);"> -->
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label" id="label">Image</label>
                 <input type="file" class="form-control" id="image" aria-describedby="emailHelp">
@@ -262,8 +242,8 @@
                 <input type="textarea" style="height:60px" class="form-control" id="address">
             </div>
 
-            <label for="" class="label" id="gender">Gender</label><br>
-            <input type="text" name="gender">
+            <label for="" class="label" id="gender" >Gender</label><br>
+            <input type="text" name="gender" style="width:300px">
         </div>
         <div class="right_side">
             <div class="mb-3">
@@ -279,8 +259,6 @@
                 <label for="exampleInputEmail1" class="form-label" id="label"><b>Languages Known</b></label><br>
                 <input type="text" id="language" style="height:60px; width:500px;">
             </div><br>
-
-
             <center><button class="btn btn-primary" id="btn">Submit</button></center>
 
 
@@ -293,14 +271,12 @@
             <div class="profile_img">
 
                 <h1>BIODATA</h1>
-                <!-- <div class="image"> -->
+                
                     <div class="preview">
                         <img id="load_file_priview">
                       </div>
-                      
-
-                    <!-- <img src="{% static 'images/pic.jpg' %}" alt="profile pic"> -->
-                    <!-- <img src="" style="display:none"> -->
+          <!-- <img src="{% static 'images/pic.jpg' %}" alt="profile pic"> -->
+                   
                     <input type="file" name="image" id="file" onchange="loadFile(event)" style="display: none;">
 
                     <h2>About</h2>
@@ -319,19 +295,11 @@
 
 
                     <div class="buttons">
-                        <center> <a href=""><button class="btn btn-primary" id="btn1" style="margin-bottom:20px">Create
+                        <center> <a href=""><button class="btn btn-primary" id="btn1" style="margin-bottom:20px;">Create
                                     New</button></a> </center>
-                        <button class="btn btn-primary" onclick="window.print()" id="btn1">Print Bio Data</button>
+                        <!-- <button class="btn btn-primary" onclick="window.print()" id="btn1"  style="margin-left:20px;">Print Bio Data</button> -->
 
                     </div>
-
-                    <!-- <ul>
-                    <li>DOB: 15/3/1995</li>
-                    <li>Age: 28</li>
-                    <li>Email: naina@gmail.com</li>
-                    <li>Address: Beypore</li>
-                    <li>Gender: Female</li>
-                </ul> -->
                 </div>
             </div>
 
@@ -345,7 +313,7 @@
                 }
 
                 .contact_details {
-                    margin-left: -180px;
+                    margin-left: -30px;
                     font-size: 18px;
                     padding-bottom: 40px;
 
@@ -410,178 +378,11 @@
                 preview.style.display = "block";
   }
 }
-            // document.getElementById('profile_pic').style.display ='show'
-
-            // var loadFile = function (event) {
-            //     var image = document.getElementById('output');
-            //     image.src = URL.createObjectURL(event.target.files[0]);
-            // };
-
 
         }
-
-        // function loadFile(event) {
-        //     console.log(event.target.files[0]);
-        // }
-
 
 
     </script>
-
-
-
-
-
-
-    <!-- <div class="pop_up" id="pop_up">
-        <div class="left_side">
-            <form class="form">
-                <h2>BioData</h2>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label" id="label">Image</label>
-                    <input type="file" class="form-control" id="input" aria-describedby="emailHelp">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label" id="label">Name</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label" id="label">DOB</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label" id="label">Age</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label" id="label">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label" id="label">Address</label>
-                    <input type="textarea" style="height:60px" class="form-control" id="exampleInputPassword1">
-                </div>
-
-                <label for="" id="label">Gender</label><br>
-                <label for="" id="label">Male</label>
-                <input type="radio" name="gender">
-                <label for="" id="label">Female</label>
-                <input type="radio" name="gender">
-        </div>
-        <div class="right_side">
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label" id="label"><b>Education</b></label>
-                <input type="text" class="form-control" id="input1" aria-describedby="emailHelp"
-                    placeholder="Masters degree if any"><br>
-                <input type="text" class="form-control" id="input1" aria-describedby="emailHelp"
-                    placeholder="Bachelors degree if any">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label" id="label"><b>Experience</b></label><br>
-                <input type="textarea" id="input1" style="height:60px; width:500px;">
-            </div><br>
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label" id="label"><b>Languages Known</b></label><br>
-                <input type="text" id="input1" style="height:60px; width:500px;">
-            </div><br>
-
-            <button type="submit" class="btn btn-primary" id="btn1">Edit</button>
-            <button type="submit" class="btn btn-primary" id="btn2">Delete</button><br><br>
-            <h5>Your details has been succesfully submitted</h5>
-
-
-            </form>
-        </div>
-    </div>
-    <script>
-       
-    </script> -->
-
-    <!-- <div>
-        <table class="table" id="biodata">
-            <thead>
-                <tr>
-                    <th scope="col">S_no</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">DOB</th>
-                    <th scope="col">Age</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Address</th>
-                    <th scope="col">Gender</th>
-                    <th scope="col">Education</th>
-                    <th scope="col">Experience</th>
-                    <th scope="col">Languages</th>
-                    <th scope="col">image</th>
-                </tr>
-            </thead>
-            <tbody>
-
-            </tbody>
-        </table>
-    </div>
-</div>
-    <button onclick="delete()"></button>
-    <button onclick="edit()"></button>
-
-    <script>
-        var s_no = 0
-        var tr_no = 0
-
-        function submit() {
-
-            var tb = document.getElementById("biodata")
-            var new_tr = document.createElement("tr")
-            var name = document.getElementById("name")
-            var dob = document.getElementById("DOB")
-            var age = document.getElementById("age")
-            var email = document.getElementById("email")
-            var address = document.getElementById("address")
-            var gender = document.getElementById("gender")
-            var qualification = document.getElementById("qualification")
-            var experience = document.getElementById("experience")
-            var languages = document.getElementById("language")
-
-            tr_no++
-            var tr_id = 'tr' + tr_no
-            new_tr.setAttribute('id', tr_id)
-
-            var td_name = new_tr.appendChild(document.createElement("td"))
-            var td_DOB = new_tr.appendChild(document.createElement("td"))
-            var td_age = new_tr.appendChild(document.createElement("td"))
-            var td_email = new_tr.appendChild(document.createElement("td"))
-            var td_address = new_tr.appendChild(document.createElement("td"))
-            var td_gender = new_tr.appendChild(document.createElement("td"))
-            var td_qualification = new_tr.appendChild(document.createElement("td"))
-            var td_experience = new_tr.appendChild(document.createElement("td"))
-            var td_language = new_tr.appendChild(document.createElement("td"))
-
-            s_no++
-            td_sno.innerHTML = s_no
-            td_name.innerHtml = name.value
-            td_DOB.innerHTML = DOB.value
-            td_age.innerHTML = age.value
-            td_email.innerHTML = email.value
-            td_address.innerHTML = address.value
-            td_gender.innerHTML = gender.value
-            td_qualification.innerHTML = qualification.value
-            td_experience.innerHTML = experience.value
-            td_language.innerHTML = language.value
-
-
-            td_action.innerHTML = "<button onclick='submit()' type='button' class='btn btn-primary '></button>"
-            tb.appendChild(new_tr)
-            name.value = ""
-            DOB.value = ""
-            age.value = ""
-            email.value = ""
-            address.value = ""
-            gender.value = ""
-            qualification.value = ""
-            experience.value = ""
-            language.value = ""
-
-        }
-    </script> -->
 </body>
 
 </html>
